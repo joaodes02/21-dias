@@ -16,8 +16,8 @@ let restauranteUsuario = prompt("O restaurante está aberto? (s/n)")
 
 if (fomeUsuario === "n" || dinUsuario === "n"){
     console.log("Hoje o jantar será em casa! ")
-}else if(fomeUsuario === "s" && dinUsuario ==="s" && restauranteUsuario === "n"){
-    console.log ("Peça um delivery!!")
-}else if(fomeUsuario === "s" && dinUsuario === "s" && restauranteUsuario === "s"){
-    console.log("Hoje o jantar será no seu restaurante preferido!!")
+}else if(dinUsuario ==="s" && restauranteUsuario === "s"){
+    console.log ("Hoje o jantar será no seu restaurante preferido!!!")
+}else{
+    console.log("Peça um delevery!!")
 }

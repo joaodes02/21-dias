@@ -37,4 +37,7 @@ for(let contador=tabuada; contador<=tabuada +2; contador++){
     for(let contador2 = 0; contador2 <=10; contador2++){
         console.log(`${contador} * ${contador2} =`, contador*contador2)
     }
+    
 }
+
+

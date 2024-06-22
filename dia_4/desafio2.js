@@ -35,4 +35,5 @@ if(idadeUsuario < 18 || !cartaMotUsuario){
     console.log(`${nomeUsuario}, você pode dirigir mas não tem um carro.`)
 }else{
     console.log(`${nomeUsuario}, você será um motorista!`)
+    
 }

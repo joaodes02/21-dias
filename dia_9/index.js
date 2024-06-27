@@ -46,10 +46,9 @@ if(imc < 18.5){
 
 let anoAtual = 2023
 let dataNascimento = anoAtual - idade
-
 console.log(`Você nasceu em: ${dataNascimento}`)
 
-// 
+// Exibindo valores
 
 let continuar = true;
 

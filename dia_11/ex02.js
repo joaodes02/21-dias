@@ -35,3 +35,33 @@ console.log("Modelo, ano e valores: ")
 for(let i=0; i < arrayModelos.length; i++){
     console.log(`Modelo:${arrayModelos[i]} - Ano:${arrayAnos[i]} - Valor:${arrayValores[i]}`)
 }
+
+
+// ordenando por preço 
+console.log("------------------------------------------------")
+
+
+for(let i = 0; i < arrayValores.length - 1; i++){
+    for(let j=0; j < arrayValores.length - i - 1; j++){
+        if(arrayValores[j] > arrayValores[j + 1]){
+            
+            let modeloMaiorValor = arrayModelos[j]
+            arrayModelos[j] = arrayModelos[j+1]
+            arrayModelos[j+1] = modeloMaiorValor
+
+            let anoMaiorValor = arrayAnos[j]
+            arrayAnos[j] = arrayAnos[j+1]
+            arrayAnos[j+1] = anoMaiorValor
+
+            let maiorValor = arrayValores[j]
+            arrayValores[j] = arrayValores[j+1]
+            arrayValores[j+1] = maiorValor
+        }
+    }
+}
+
+console.log("Carros ordenados pelo preço: ")
+for(let i = 0; i < arrayModelos.length; i++){
+    console.log(`Modelos: ${arrayModelos[i]} - Anos: ${arrayAnos[i]} - Valores: ${arrayValores[i]} `)
+
+}

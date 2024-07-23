@@ -24,3 +24,4 @@ class Computador{
 }
 
 let pc = new Computador('Desktop', 'i3-9300F','Dedicado', '1TB', '16GB', true)
+pc.inf();

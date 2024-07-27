@@ -86,6 +86,48 @@ function CadastrarReserva() {
 }
 
 
+//Funções de Buscas:
+
+function ProcurarReservaPeloHotel(idhotel){
+    hoteis.forEach(reserva => {
+        if(idHotel == reserva.IdHotel){
+            let i = idHotel - 1 
+            console.log(`hotel: ${reserva.hoteis[i].Nome}`)
+            console.log(`Responsavel: ${reserva.Responsavel}`)
+            console.log(`Dia de entrada: ${reserva.DiaEntrada}`)
+            console.log(`Dia de Saida ${reserva.DiaSaida}`)
+        }
+    })
+
+}
+
+function ProcurarHotelPelaReserva(idReserva){
+    let idHotel = reservas[idReserva - 1].IdHotel
+    console.log(`Hotel: ${hoteis[idHotel - 1].Nome}`)
+    console.log(`Endereço: ${hoteis[idHotel - 1].Endereco}`)
+    console.log(`Dia de Entrada: ${reservas[idHotel - 1].DiaEntrada}`)
+    console.log(`Dia de Saida: ${reservas[idHotel - 1].DiaSaida}`)
+}
+
+function ProcurarReservaPeloNome(nome){
+    for(let i = 0; i < reservas.length;i++){
+        if(nome == reservas[i].Responsavel){
+            console.log(`Id da Reserva: ${reservas[i].Id}`)
+            console.log(`Hotel: ${hoteis[(reservas[i].idHotel)- 1].Nome }`)
+        }
+    }
+}
+
+
+function ProcurarHotelPelaCategoria(categoria){
+    let hoteisProcurados = []
+    for(let i = 0; i < hoteis.length; i++){
+        if(categoria == hoteis[i].Categoria){
+            hoteisProcurados.push(hoteis[i].Nome)
+        }
+    }
+    return hoteisProcurados
+}
 
 
 
